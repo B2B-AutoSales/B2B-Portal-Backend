@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+
+  auth-service:
+    container_name: auth-service
+    build: .
+    ports:
+      - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
+      - ${LOCAL_GRPC_PORT}:${DOCKER_GRPC_PORT}
+    env_file: .env
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:${POSTGRESDB_DOCKER_PORT}/${POSTGRESDB_DATABASE}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRESDB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRESDB_ROOT_PASSWORD}
+      ACCESS_TOKEN_EXPIRATION: ${ACCESS_TOKEN_EXPIRATION}
+    depends_on:
+      - postgres
+    networks:
+      - b2b-network  # Подключаем этот сервис к той же сети
+
+
+  postgres:
+    container_name: auth-db
+    image: postgres:16
+    env_file: ./.env
+    environment:
+      POSTGRES_USER: ${POSTGRESDB_USER}
+      POSTGRES_PASSWORD: ${POSTGRESDB_ROOT_PASSWORD}
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: ${POSTGRESDB_DATABASE}
+    volumes:
+      - postgres:/data/postgres
+      - ./docker/db-init:/docker-entrypoint-initdb.d
+    ports:
+      - ${POSTGRESDB_LOCAL_PORT}:${POSTGRESDB_DOCKER_PORT}
+    restart: unless-stopped
+    networks:
+      - b2b-network
+
+networks:
+  b2b-network:  # Определяем сеть "b2b-network"
+    driver: bridge  # Используем стандартный драйвер bridge для локальной сети Docker
+    external: true
+
+volumes:
+  postgres:
+    driver: localdocker
+
+
+
