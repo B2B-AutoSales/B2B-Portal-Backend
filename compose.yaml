@@ -1,8 +1,8 @@
 version: '3.8'
 services:
 
-  auth-service:
-    container_name: auth-service
+  portal-service:
+    container_name: portal-service
     build: .
     ports:
       - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
@@ -12,15 +12,13 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:${POSTGRESDB_DOCKER_PORT}/${POSTGRESDB_DATABASE}
       SPRING_DATASOURCE_USERNAME: ${POSTGRESDB_USER}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRESDB_ROOT_PASSWORD}
-      ACCESS_TOKEN_EXPIRATION: ${ACCESS_TOKEN_EXPIRATION}
     depends_on:
       - postgres
     networks:
       - b2b-network  # Подключаем этот сервис к той же сети
 
-
   postgres:
-    container_name: auth-db
+    container_name: b2b-db
     image: postgres:16
     env_file: ./.env
     environment:
@@ -37,6 +35,7 @@ services:
     networks:
       - b2b-network
 
+
 networks:
   b2b-network:  # Определяем сеть "b2b-network"
     driver: bridge  # Используем стандартный драйвер bridge для локальной сети Docker
@@ -44,7 +43,7 @@ networks:
 
 volumes:
   postgres:
-    driver: localdocker
+    driver: local
 
 
 

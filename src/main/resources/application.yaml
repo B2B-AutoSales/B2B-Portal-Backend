@@ -22,4 +22,7 @@ spring:
 
 grpc:
   server:
-    port: 8090
+    port: 8091
+
+server:
+  port: 8081

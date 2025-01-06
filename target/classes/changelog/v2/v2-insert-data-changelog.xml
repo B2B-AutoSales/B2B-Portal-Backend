@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="boshiro123">
+        <insert tableName="roles">
+            <column name="id" value="ef4f5ad2-8147-46cb-8389-c2b8c3ef6b10"/>
+            <column name="name" value="ADMIN"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="id" value="adc0305a-df29-4f08-9d73-800fde2048f0"/>
+            <column name="name" value="CUSTOMER"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="id" value="4b794b59-bff8-4013-b656-5d34c33f4ce3"/>
+            <column name="name" value="MODERATOR"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="id" value="4b794b59-bff8-4013-b656-5d33c33f4ce3"/>
+            <column name="name" value="OFFICER"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2" author="boshiro123">
+        <insert tableName="registration_status">
+            <column name="id" value="ef4f2ad2-8147-46cb-8389-c2b8c3ef6b10"/>
+            <column name="name" value="PENDING"/>
+        </insert>
+        <insert tableName="registration_status">
+            <column name="id" value="adc0105a-df29-4f08-9d73-800fde2048f0"/>
+            <column name="name" value="COMPLETED"/>
+        </insert>
+        <insert tableName="registration_status">
+            <column name="id" value="4b794b50-bff8-4013-b656-5d34c33f4ce3"/>
+            <column name="name" value="DECLINED"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
