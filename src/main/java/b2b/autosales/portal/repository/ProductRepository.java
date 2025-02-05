@@ -1,4 +1,11 @@
 package b2b.autosales.portal.repository;
 
-public interface ProductRepository {
+import b2b.autosales.portal.models.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, UUID> {
 }
