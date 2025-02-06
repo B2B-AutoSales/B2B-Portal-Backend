@@ -1,21 +1,21 @@
 version: '3.8'
 services:
 
-#  portal-service:
-#    container_name: portal-service
-#    build: .
-#    ports:
-#      - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
-#      - ${LOCAL_GRPC_PORT}:${DOCKER_GRPC_PORT}
-#    env_file: .env
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:${POSTGRESDB_DOCKER_PORT}/${POSTGRESDB_DATABASE}
-#      SPRING_DATASOURCE_USERNAME: ${POSTGRESDB_USER}
-#      SPRING_DATASOURCE_PASSWORD: ${POSTGRESDB_ROOT_PASSWORD}
-#    depends_on:
-#      - postgres
-#    networks:
-#      - b2b-network  # Подключаем этот сервис к той же сети
+  portal-service:
+    container_name: portal-service
+    build: .
+    ports:
+      - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
+      - ${LOCAL_GRPC_PORT}:${DOCKER_GRPC_PORT}
+    env_file: .env
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:${POSTGRESDB_DOCKER_PORT}/${POSTGRESDB_DATABASE}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRESDB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRESDB_ROOT_PASSWORD}
+    depends_on:
+      - postgres
+    networks:
+      - b2b-network  # Подключаем этот сервис к той же сети
 
   postgres:
     container_name: b2b-db
