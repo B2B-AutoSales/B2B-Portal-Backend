@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.CommercialProposalItem;
-import b2b.autosales.portal.models.dto.request.create.CommercialProposalItemCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.CommercialProposalItemUpdateRequest;
-import b2b.autosales.portal.models.dto.response.CommercialProposalItemResponse;
+import b2b.autosales.portal.dto.request.create.CommercialProposalItemCreateRequest;
+import b2b.autosales.portal.dto.request.update.CommercialProposalItemUpdateRequest;
+import b2b.autosales.portal.dto.response.CommercialProposalItemResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.CustomerInteraction;
-import b2b.autosales.portal.models.dto.request.create.CustomerInteractionCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.CustomerInteractionUpdateRequest;
-import b2b.autosales.portal.models.dto.response.CustomerInteractionResponse;
+import b2b.autosales.portal.dto.request.create.CustomerInteractionCreateRequest;
+import b2b.autosales.portal.dto.request.update.CustomerInteractionUpdateRequest;
+import b2b.autosales.portal.dto.response.CustomerInteractionResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.Organisation;
-import b2b.autosales.portal.models.dto.request.create.OrganisationCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.OrganisationUpdateRequest;
-import b2b.autosales.portal.models.dto.response.OrganisationResponse;
+import b2b.autosales.portal.dto.request.create.OrganisationCreateRequest;
+import b2b.autosales.portal.dto.request.update.OrganisationUpdateRequest;
+import b2b.autosales.portal.dto.response.OrganisationResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

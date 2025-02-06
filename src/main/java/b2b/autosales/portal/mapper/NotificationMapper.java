@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.Notification;
-import b2b.autosales.portal.models.dto.request.create.NotificationCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.NotificationUpdateRequest;
-import b2b.autosales.portal.models.dto.response.NotificationResponse;
+import b2b.autosales.portal.dto.request.create.NotificationCreateRequest;
+import b2b.autosales.portal.dto.request.update.NotificationUpdateRequest;
+import b2b.autosales.portal.dto.response.NotificationResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.OrderItem;
-import b2b.autosales.portal.models.dto.request.create.OrderItemCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.OrderItemUpdateRequest;
-import b2b.autosales.portal.models.dto.response.OrderItemResponse;
+import b2b.autosales.portal.dto.request.create.OrderItemCreateRequest;
+import b2b.autosales.portal.dto.request.update.OrderItemUpdateRequest;
+import b2b.autosales.portal.dto.response.OrderItemResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

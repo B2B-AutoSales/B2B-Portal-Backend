@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.Permission;
-import b2b.autosales.portal.models.dto.request.create.PermissionCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.PermissionUpdateRequest;
-import b2b.autosales.portal.models.dto.response.PermissionResponse;
+import b2b.autosales.portal.dto.request.create.PermissionCreateRequest;
+import b2b.autosales.portal.dto.request.update.PermissionUpdateRequest;
+import b2b.autosales.portal.dto.response.PermissionResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

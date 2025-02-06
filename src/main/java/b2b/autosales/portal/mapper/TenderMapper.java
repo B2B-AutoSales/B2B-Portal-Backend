@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.Tender;
-import b2b.autosales.portal.models.dto.request.create.TenderCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.TenderUpdateRequest;
-import b2b.autosales.portal.models.dto.response.TenderResponse;
+import b2b.autosales.portal.dto.request.create.TenderCreateRequest;
+import b2b.autosales.portal.dto.request.update.TenderUpdateRequest;
+import b2b.autosales.portal.dto.response.TenderResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

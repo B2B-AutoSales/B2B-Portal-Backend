@@ -1,9 +1,9 @@
 package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.ParserSetup;
-import b2b.autosales.portal.models.dto.request.create.ParserSetupCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.ParserSetupUpdateRequest;
-import b2b.autosales.portal.models.dto.response.ParserSetupResponse;
+import b2b.autosales.portal.dto.request.create.ParserSetupCreateRequest;
+import b2b.autosales.portal.dto.request.update.ParserSetupUpdateRequest;
+import b2b.autosales.portal.dto.response.ParserSetupResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

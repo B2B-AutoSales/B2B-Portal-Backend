@@ -2,13 +2,13 @@ package b2b.autosales.portal.mapper;
 
 import b2b.autosales.portal.models.Organisation;
 import b2b.autosales.portal.models.User;
-import b2b.autosales.portal.models.dto.request.create.UserCreateRequest;
-import b2b.autosales.portal.models.dto.request.update.UserUpdateRequest;
-import b2b.autosales.portal.models.dto.response.UserResponse;
+import b2b.autosales.portal.dto.request.create.UserCreateRequest;
+import b2b.autosales.portal.dto.request.update.UserUpdateRequest;
+import b2b.autosales.portal.dto.response.UserResponse;
 import b2b.autosales.portal.models.enums.RoleName;
 import org.mapstruct.*;
 
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {RoleMapper.class, OrganisationMapper.class})
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {RolePermissionMapper.class, OrganisationMapper.class})
 public interface UserMapper {
 
     @Mapping(target = "role", source = "role")
