@@ -6,10 +6,12 @@ import b2b.autosales.portal.dto.request.update.CommercialProposalUpdateRequest;
 import b2b.autosales.portal.dto.response.CommercialProposalResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingConstants;
 import org.mapstruct.MappingTarget;
 
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {OrganisationMapper.class, UserMapper.class, TenderMapper.class})
+@Mapper(
+        componentModel = "spring",
+        uses = {OrganisationMapper.class, UserMapper.class, TenderMapper.class}
+)
 public interface CommercialProposalMapper {
 
     CommercialProposalResponse toCommercialProposalResponse(CommercialProposal commercialProposal);
