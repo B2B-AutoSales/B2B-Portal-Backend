@@ -9,7 +9,8 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.MappingTarget;
 
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {CommercialProposalMapper.class, ProductMapper.class})
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = { CommercialProposalMapper.class,
+        ProductMapper.class })
 public interface CommercialProposalItemMapper {
 
     CommercialProposalItemResponse toCommercialProposalItemResponse(CommercialProposalItem commercialProposalItem);
@@ -17,11 +18,15 @@ public interface CommercialProposalItemMapper {
     CommercialProposalItem toCommercialProposalItem(CommercialProposalItemResponse commercialProposalItemResponse);
 
     @Mapping(target = "id", ignore = true)
-    CommercialProposalItem toCommercialProposalItem(CommercialProposalItemCreateRequest createCommercialProposalItemRequest);
+    CommercialProposalItem toCommercialProposalItem(
+            CommercialProposalItemCreateRequest createCommercialProposalItemRequest);
 
     @Mapping(target = "id", ignore = true)
-    CommercialProposalItem toCommercialProposalItem(CommercialProposalItemUpdateRequest updateCommercialProposalItemRequest);
+    CommercialProposalItem toCommercialProposalItem(
+            CommercialProposalItemUpdateRequest updateCommercialProposalItemRequest);
 
     @Mapping(target = "id", ignore = true)
-    void updateCommercialProposalItemFromRequest(CommercialProposalItemUpdateRequest updateCommercialProposalItemRequest, @MappingTarget CommercialProposalItem commercialProposalItem);
+    void updateCommercialProposalItemFromRequest(
+            CommercialProposalItemUpdateRequest updateCommercialProposalItemRequest,
+            @MappingTarget CommercialProposalItem commercialProposalItem);
 }

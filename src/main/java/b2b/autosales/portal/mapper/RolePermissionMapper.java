@@ -9,7 +9,8 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.MappingTarget;
 
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {RolePermissionMapper.class, PermissionMapper.class})
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = { RolePermissionMapper.class,
+        PermissionMapper.class })
 public interface RolePermissionMapper {
 
     RolePermissionResponse toRolePermissionResponse(RolePermission rolePermission);
@@ -23,5 +24,6 @@ public interface RolePermissionMapper {
     RolePermission toRolePermission(RolePermissionUpdateRequest updateRolePermissionRequest);
 
     @Mapping(target = "id", ignore = true)
-    void updateRolePermissionFromRequest(RolePermissionUpdateRequest updateRolePermissionRequest, @MappingTarget RolePermission rolePermission);
+    void updateRolePermissionFromRequest(RolePermissionUpdateRequest updateRolePermissionRequest,
+            @MappingTarget RolePermission rolePermission);
 }

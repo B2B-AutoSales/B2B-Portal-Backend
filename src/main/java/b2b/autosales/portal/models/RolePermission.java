@@ -22,7 +22,7 @@ public class RolePermission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Unique identifier of the role permission", example = "1")
-    private Long id;
+    private UUID id;
 
     @Enumerated(EnumType.STRING)
     @Column(length = 10, name = "role")

@@ -27,7 +27,8 @@ public class RolePermissionServiceImpl implements RolePermissionService {
     }
 
     @Override
-    public RolePermissionResponse updateRolePermission(UUID id, RolePermissionUpdateRequest updateRolePermissionRequest) {
+    public RolePermissionResponse updateRolePermission(UUID id,
+            RolePermissionUpdateRequest updateRolePermissionRequest) {
         RolePermission existingRolePermission = rolePermissionRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("RolePermission not found"));
 
