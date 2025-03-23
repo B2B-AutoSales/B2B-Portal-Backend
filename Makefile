@@ -22,8 +22,8 @@ up-d:
 	docker-compose up -d
 
 build:
-	mvn clean package
-	docker-compose up
+	mvn clean package -DskipTests
+	docker-compose up --build
 
 build_d:
 	docker-compose up -d db

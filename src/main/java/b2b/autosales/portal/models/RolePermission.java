@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
+import org.hibernate.annotations.UuidGenerator.Style;
 
 import java.util.UUID;
 
@@ -20,8 +21,8 @@ import java.util.UUID;
 public class RolePermission {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Unique identifier of the role permission", example = "1")
+    @UuidGenerator(style = UuidGenerator.Style.RANDOM)
+    @Schema(description = "Unique identifier of the parser setup", example = "550e8400-e29b-41d4-a716-446655440000")
     private UUID id;
 
     @Enumerated(EnumType.STRING)
